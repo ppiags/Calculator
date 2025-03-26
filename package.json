@@ -1,5 +1,5 @@
 {
-  "name": "Calculator",
+  "name": "calculator",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
     "rebuild": "yarn install --force && cd ios && pod install && cd ..",
     "nuke-ios": "rm -rf node_modules; rm -rf ios/build; rm -rf ios/Pods; rm -rf ios/Podfile.lock; yarn rebuild",
     "nuke-android": "rm -rf node_modules; yarn android-clean; yarn install --force",
-    "android-build": "cd android && ./gradlew assembleRelease && cd .."
+    "android-build": "cd android && ./gradlew assembleRelease && cd ..",
+    "test": "jest"
   },
   "dependencies": {
     "react": "19.0.0",
@@ -28,6 +29,7 @@
     "@react-native/eslint-config": "0.78.1",
     "@react-native/metro-config": "0.78.1",
     "@react-native/typescript-config": "0.78.1",
+    "@testing-library/react-native": "^13.2.0",
     "@tsconfig/react-native": "^3.0.5",
     "@types/jest": "^29.5.14",
     "@types/react": "^19.0.12",
@@ -41,8 +43,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "resolutions": {
-    "styled-components": "^5"
   }
 }
